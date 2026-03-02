@@ -1,0 +1,52 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --accent:#4f46e5;
+  --muted:#94a3b8;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
+  background:linear-gradient(180deg,var(--bg),#071025);
+  color:#e6eef8;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.app{
+  width:960px;
+  max-width:94vw;
+  padding:20px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:12px;
+  box-shadow:0 6px 30px rgba(2,6,23,0.6);
+  position:relative;
+  z-index:10;
+  pointer-events: auto;
+}
+h1{margin:0 0 12px 0;font-size:20px}
+.controls{display:flex;gap:10px;align-items:center;margin-bottom:12px}
+.controls{position:relative;z-index:11}
+.controls{pointer-events:auto}
+.controls input[type=file]{color:var(--muted)}
+button{background:var(--accent);border:0;color:white;padding:8px 12px;border-radius:8px;cursor:pointer}
+button:disabled{opacity:0.5;cursor:default}
+select{padding:6px;border-radius:6px;background:#071029;color:#dbeafe;border:0}
+canvas{width:100%;height:360px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));border-radius:8px;display:block;pointer-events:none}
+
+/* full-viewport canvas (positioned behind the UI) */
+canvas#canvas{
+  position:fixed;
+  inset:0;
+  width:100vw;
+  height:100vh;
+  z-index:-1;
+  pointer-events:none;
+}
+.hint{color:var(--muted);margin-top:10px}
+@media (max-width:640px){
+  .app{padding:12px}
+  canvas{height:260px}
+}

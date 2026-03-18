@@ -1,6 +1,6 @@
 # Simple Audio Visualizer
-
 A minimal HTML/CSS/JS project demonstrating an audio visualizer using the Web Audio API and an HTML canvas.
+
 
 Files:
 - `index.html` — main page with controls and canvas
@@ -28,7 +28,8 @@ python -m http.server 8000
 
 Notes:
 - Some browsers restrict autoplay; the visualizer requires a user gesture to start audio.
-- If you want to serve files over localhost, run a small static server, e.g. with Python:
+- If you want to serve files over localhost,
+- run a small static server, e.g. with Python:
 
   ```powershell
   # from the project folder

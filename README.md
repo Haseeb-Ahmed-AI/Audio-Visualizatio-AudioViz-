@@ -10,11 +10,13 @@ Files:
   
 - `script.js` — Web Audio API + canvas visualization logic
 
+
 Usage:
 
 1. Open `index.html` in a modern browser (Chrome/Edge/Firefox). For local file audio playback, browsers usually allow playing a selected file without a server.
 2. Click "Choose File" to pick an audio file (MP3, WAV, OGG, etc.).
 3. Press Play to begin visualization. Use Pause to stop playback. Change FFT size for different granularity.
+
 
 Microphone input:
 
@@ -22,9 +24,11 @@ Microphone input:
 - Use the "Mic:" dropdown to choose a specific input device if you have multiple microphones.
 - Adjust the "Gain" slider to change mic sensitivity.
 
+
 Security / serving note:
 
 - getUserMedia (microphone access) requires a secure context (HTTPS) or `http://localhost`. If you open the file via the `file:///` protocol, the microphone may not be available. To serve locally, run:
+
 
 ```powershell
 # from the project folder
